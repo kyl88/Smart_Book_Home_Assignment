@@ -11,7 +11,10 @@ class Course(models.Model):
     class UserProgress(models.Model):
         user = models.ForeignKey(User, on_delete=models.CASCADE)
         course = models.ForeignKey(Course, on_delete=models.CASCADE)
-        completed = models.BooleanField(default=False)   
+        progress_percentage = models.IntegerField(default=0)
+        completed = models.BooleanField(default=False)  
+        last_access = models.DateTimeField(auto_now=True)    
 
         def __str__(self):
-            return f"{self.user.username} - {self.course.title}"
+            return f"{self.user.username} {self.course.title}: {self.progress_percentage}%"
+        
