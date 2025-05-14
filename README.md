@@ -1,5 +1,7 @@
 # Smart Book Recommendation and Performance Tracker
 
+## Please see Master branch for detailed code 
+
 ## Objectives
 
 ### You are building a backend service for an online learning platform 
